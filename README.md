@@ -38,6 +38,8 @@ Git repository is installed to clone XV6 from github.
 
 COMMAND: sudo apt install git
 
+![image](https://user-images.githubusercontent.com/73429559/137187663-c2e162d5-50c4-4174-a03c-b8ebd57157a3.png)
+
 
 
 
