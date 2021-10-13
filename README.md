@@ -375,8 +375,8 @@ This user program will call system call chpr(change priority) to change priority
 
 ### CODE:
 ```
-#include "types.h" #i
-nclude "stat.h" 
+#include "types.h" 
+#include "stat.h" 
 #include "user.h" 
 #include "fcntl.h"
 
