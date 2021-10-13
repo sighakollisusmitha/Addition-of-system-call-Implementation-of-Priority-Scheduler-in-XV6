@@ -369,10 +369,10 @@ This user program will call system call chpr(change priority) to change priority
 #include "types.h" #include "stat.h" #include "user.h" #include "fcntl.h"
 
 int
-main(int argc, char *argv[])
-{
-int priority, pid;
-if(argc < 3)
+    main(int argc, char *argv[])
+      {
+         int priority, pid;
+         if(argc < 3)
 {
 printf(2, "Usage: nice pid priority\n"); exit();
 }
