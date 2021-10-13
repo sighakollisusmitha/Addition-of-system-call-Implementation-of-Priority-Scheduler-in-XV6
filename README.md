@@ -151,11 +151,11 @@ It defines the function that connects the kernel and the shell and by using the 
 
 CODE: extern int sys_cps(void);
 
-![image](https://user-images.githubusercontent.com/73429559/137190708-9132a8d8-2b37-4ab5-b40e-8b0f050768d9.png)
+![image](https://user-images.githubusercontent.com/73429559/137193214-8bf08fa1-cc4b-4c9e-bed1-edc7613bb070.png)
 
 CODE: [SYS_cps] sys_cps,
 
-![image](https://user-images.githubusercontent.com/73429559/137190759-37bd037c-f2dd-4b04-b2d8-901df2950973.png)
+![image](https://user-images.githubusercontent.com/73429559/137193369-20baf63a-20c2-4a27-8d28-c3976aff5de1.png)
 
  7) Add code to proc.c :
 
