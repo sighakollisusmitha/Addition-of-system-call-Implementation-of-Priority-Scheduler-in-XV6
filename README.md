@@ -40,6 +40,21 @@ COMMAND: sudo apt install git
 
 ![image](https://user-images.githubusercontent.com/73429559/137187663-c2e162d5-50c4-4174-a03c-b8ebd57157a3.png)
 
+CLONING XV6 FROM GITHUB:
+
+Using git and cloning XV6 OS from git://github.com/mit-pdos/xv6-public.git
+
+COMMAND:
+
+git clone git://github.com/mit-pdos/xv6-public.git
+
+![image](https://user-images.githubusercontent.com/73429559/137187877-5b3a6d51-2cda-4114-a874-7371506063a9.png)
+
+INSTALLING MAKE REPOSITORY:
+
+COMMAND: Sudo apt install make
+
+![image](https://user-images.githubusercontent.com/73429559/137187935-55c33dd2-4d77-4cf6-b1ed-237ad5ea3449.png)
 
 
 
