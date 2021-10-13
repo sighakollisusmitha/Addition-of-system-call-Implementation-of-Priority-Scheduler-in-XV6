@@ -85,7 +85,7 @@ The Makefile needs to be edited to make our program available for the xv6 source
 
 ![image](https://user-images.githubusercontent.com/73429559/137188171-aa6c81fe-0d20-41c1-a037-d1a2ddc3886f.png)
 
-![image](https://user-images.githubusercontent.com/73429559/137188220-98bef4fb-8373-4dbe-97c8-0a3408650426.png)
+![image](https://user-images.githubusercontent.com/73429559/137188734-c5913ff2-7192-4f8e-a0e4-59065ec3df0b.png)
 
 ⮚	Now, start xv6 system on QEMU and when it booted up, run ls command to check whether our program is available for the user.
 
