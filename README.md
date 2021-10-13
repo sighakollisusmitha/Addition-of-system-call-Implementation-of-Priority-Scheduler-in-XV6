@@ -142,11 +142,11 @@ We add the real implementation of our method here. We add a function sys_cps in 
 
 ### CODE:
 ```
-Int sys_cps(void)
+int sys_cps(void)
 
 {
 
-Return cps();
+return cps();
 
 }
 ```
@@ -184,7 +184,7 @@ It interrupts on the processor. It acquires a lock. It runs through the process 
 
 ### CODE:
 ```
-Int cps()
+int cps()
 
 {
 
@@ -218,7 +218,7 @@ Create testing file ps.c with code shown below:
 #include “user.h” 
 #include “fnctl.h”
 
-Int main(int argc, char *argv[ ])
+int main(int argc, char *argv[ ])
 {
     Cps();	// calling cps function exit();
 }
@@ -380,8 +380,7 @@ nclude "stat.h"
 #include "user.h" 
 #include "fcntl.h"
 
-int
-    main(int argc, char *argv[])
+int main(int argc, char *argv[])
       {
          int priority, pid;
          if(argc < 3)
