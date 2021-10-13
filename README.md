@@ -77,13 +77,16 @@ cd xv6-public make qemu
 First of all, I have created a C program as shown in below image. I saved it inside the source code directory of xv6 operating system with the name myprogram.c
 
 ### CODE:
-
-#include “types.h” #include “stat.h” #include “user.h”
-Int main(int argc,char *argv[ ])
+```
+#include “types.h” 
+#include “stat.h” 
+#include “user.h”
+int main(int argc,char *argv[ ])
 
 {
     Printf(“a simple c program to experiment\n”); Exit();
 }
+```
 
 ![image](https://user-images.githubusercontent.com/73429559/137188119-8a6e2164-83a0-4343-8119-f4103e14097c.png)
 
@@ -138,7 +141,7 @@ int cps(void);
 We add the real implementation of our method here. We add a function sys_cps in the file sysproc.c which calls the function cps().
 
 ### CODE:
-
+```
 Int sys_cps(void)
 
 {
@@ -146,6 +149,7 @@ Int sys_cps(void)
 Return cps();
 
 }
+```
 
 ![image](https://user-images.githubusercontent.com/73429559/137190613-0f15a472-4860-4026-a96e-924f8bdd9276.png)
 
@@ -178,8 +182,8 @@ We add this code to proc.c as written below.
 
 It interrupts on the processor. It acquires a lock. It runs through the process table and checks whether the process is SLEEPING or RUNNING or RUNNABLE and then prints the same pid and status of the process. It releases the lock. It returns the syscall number which is 22.
 
-CODE:
-
+### CODE:
+```
 Int cps()
 
 {
@@ -200,6 +204,7 @@ Int cps()
    release(&ptable.lock);	// releasing acquired lock 
    return 22;
 }
+```
 
 ![image](https://user-images.githubusercontent.com/73429559/137191088-ec27cf46-e42d-4c58-be9d-b94f0051a7df.png)
 
@@ -207,7 +212,7 @@ Int cps()
 Create testing file ps.c with code shown below: 
 
 ### CODE:
-
+```
 #include “types.h” 
 #include “stat.h” 
 #include “user.h” 
@@ -217,6 +222,7 @@ Int main(int argc, char *argv[ ])
 {
     Cps();	// calling cps function exit();
 }
+```
 
 ![image](https://user-images.githubusercontent.com/73429559/137191175-b930142f-0adf-460a-bf0d-cd6db9842f40.png)
 
@@ -269,6 +275,7 @@ We have added code in cps function in proc.c to print priority of process along 
 
 We create a dummy program named as foo.c and this dummy program will create a child and do sum dummy computations or calculations to waste CPU time. The main in this program take 2 arguments. The first argument is number of child processes that has to be created. We have used fork system call in this program to create child process.
 
+```
 CODE:
 #include "types.h" 
 #include "stat.h" 
@@ -306,13 +313,14 @@ int main(int argc, char *argv[])
             break;
 }
 }
+```
 
 ![image](https://user-images.githubusercontent.com/73429559/137191999-6176efb2-5981-4cc1-a6d0-f772642c6e04.png)
 
 ### 5.	Addition of new function chpr( change priority) to proc.c:
 
 We add a new function named as chpr in proc.c file. This function takes two arguments. First argument is process id, and second argument is the priority, This function changes the priority of given process id.
-
+```
 CODE:
 // Change priority int
 ChangePriority(int pid, int priority)
@@ -327,6 +335,7 @@ p->priority = priority;	//changing priority of process break;
 }
 }
 release(&ptable.lock); return pid;	}
+```
 
 ![image](https://user-images.githubusercontent.com/73429559/137192152-6332af0a-f4e6-485f-ad61-89e1c072ab77.png)
 
