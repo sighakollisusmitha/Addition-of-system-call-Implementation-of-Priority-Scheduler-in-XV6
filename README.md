@@ -56,6 +56,42 @@ COMMAND: Sudo apt install make
 
 ![image](https://user-images.githubusercontent.com/73429559/137187935-55c33dd2-4d77-4cf6-b1ed-237ad5ea3449.png)
 
+RUNNING XV6:
+
+COMMAND:
+
+cd xv6-public make qemu
+
+![image](https://user-images.githubusercontent.com/73429559/137188053-54103a36-8cff-426d-a0f1-849eb6b47932.png)
+
+Adding Simple User Program To Xv6:
+
+First of all, I have created a C program as shown in below image. I saved it inside the source code directory of xv6 operating system with the name myprogram.c
+
+CODE:
+
+#include “types.h” #include “stat.h” #include “user.h”
+Int main(int argc,char *argv[ ])
+
+{
+
+Printf(“a simple c program to experiment\n”); Exit();
+}
+
+![image](https://user-images.githubusercontent.com/73429559/137188119-8a6e2164-83a0-4343-8119-f4103e14097c.png)
+
+Makefile.c:
+The Makefile needs to be edited to make our program available for the xv6 source code for compilation. The following sections of the Makefile needs to be edited to add our program myprogram.c
+
+![image](https://user-images.githubusercontent.com/73429559/137188171-aa6c81fe-0d20-41c1-a037-d1a2ddc3886f.png)
+
+![image](https://user-images.githubusercontent.com/73429559/137188220-98bef4fb-8373-4dbe-97c8-0a3408650426.png)
+
+⮚	Now, start xv6 system on QEMU and when it booted up, run ls command to check whether our program is available for the user.
+
+⮚	Here myprogram is availablein the list and by giving the name we can see the output of the Program In image below. 
+
+![image](https://user-images.githubusercontent.com/73429559/137188302-7347d041-b0e4-4af4-8cdc-0f77c3f41491.png)
 
 
 
