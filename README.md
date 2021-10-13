@@ -26,4 +26,19 @@ SCREENSHOT:
 
 ![image](https://user-images.githubusercontent.com/73429559/137186139-6ae25e5e-8550-427b-8e36-f5ac87830eef.png)
 
+COMMAND:
+
+sudo apt get-install qemu-kvm
+
+![image](https://user-images.githubusercontent.com/73429559/137186998-46efdbca-15fe-49c5-9fe7-647e7e477a6d.png)
+
+INSTALLING GIT REPOSITORY:
+
+Git repository is installed to clone XV6 from github.
+
+COMMAND: sudo apt install git
+
+
+
+
 
