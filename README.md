@@ -83,6 +83,17 @@ Printf(“a simple c program to experiment\n”); Exit();
 Makefile.c:
 The Makefile needs to be edited to make our program available for the xv6 source code for compilation. The following sections of the Makefile needs to be edited to add our program myprogram.c
 
+![image](https://user-images.githubusercontent.com/73429559/137190129-42493577-551f-48ef-8652-75a9a23fb692.png)
+
+![image](https://user-images.githubusercontent.com/73429559/137190164-3d1839f9-01cf-4f23-ae56-62f468bb650e.png)
+
+⮚	Now, start xv6 system on QEMU and when it booted up, run ls command to check whether our program is available for the user.
+
+⮚	Here myprogram is availablein the list and by giving the name we can see the output of the Program In image below. 
+
+
+
+
 
 
 
