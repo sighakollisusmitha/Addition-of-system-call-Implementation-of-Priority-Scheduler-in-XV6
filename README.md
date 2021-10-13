@@ -220,7 +220,7 @@ Create testing file ps.c with code shown below:
 
 int main(int argc, char *argv[ ])
 {
-    Cps();	// calling cps function exit();
+    cps();	// calling cps function exit();
 }
 ```
 
