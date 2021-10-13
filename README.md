@@ -365,8 +365,11 @@ As we have added system call cps, we have to follow same steps to add system cal
 This user program will call system call chpr(change priority) to change priority of the process.
 
 ### CODE:
-
-#include "types.h" #include "stat.h" #include "user.h" #include "fcntl.h"
+```
+#include "types.h" #i
+nclude "stat.h" 
+#include "user.h" 
+#include "fcntl.h"
 
 int
     main(int argc, char *argv[])
@@ -387,6 +390,7 @@ printf(1, "pid=%d, pr=%d\n", pid, priority); ChangePriority(pid, priority);
 exit();
 }
 
+```
 ![image](https://user-images.githubusercontent.com/73429559/137193731-7e410986-eddf-42ac-b1ca-f3d7bf4a63a0.png)
 
 ### OUTPUT:
