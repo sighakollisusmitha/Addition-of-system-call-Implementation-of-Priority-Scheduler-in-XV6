@@ -1,5 +1,6 @@
 # Addition of system call, implementation of priority scheduler in XV6 Operating system
-OPERATING SYSTEM USED: XV6
+
+### OPERATING SYSTEM USED: XV6
 
 Xv6 is a simple Operating system developed by MIT for its own Operating Systems course. It is developed from the sixth edition of Unix and is coded in the C language. It is an Open Source Software and is freely available for us to develop upon.
 
