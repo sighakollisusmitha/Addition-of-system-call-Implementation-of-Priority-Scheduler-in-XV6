@@ -84,7 +84,8 @@ First of all, I have created a C program as shown in below image. I saved it ins
 int main(int argc,char *argv[ ])
 
 {
-    Printf(“a simple c program to experiment\n”); Exit();
+    Printf(“a simple c program to experiment\n”); 
+    exit();
 }
 ```
 
@@ -320,21 +321,24 @@ int main(int argc, char *argv[])
 ### 5.	Addition of new function chpr( change priority) to proc.c:
 
 We add a new function named as chpr in proc.c file. This function takes two arguments. First argument is process id, and second argument is the priority, This function changes the priority of given process id.
+### CODE:
 ```
-CODE:
+
 // Change priority int
 ChangePriority(int pid, int priority)
 {
-struct proc *p;
-acquire(&ptable.lock);	// acquire lock to access critical section 
-for(p=ptable.proc; p<&ptable.proc[NPROC]; p++)
-{
-if(p->pid == pid)	// checking process table
-{
-p->priority = priority;	//changing priority of process break;
+     struct proc *p;
+     acquire(&ptable.lock);	// acquire lock to access critical section 
+     for(p=ptable.proc; p<&ptable.proc[NPROC]; p++)
+     {
+         if(p->pid == pid)	// checking process table
+         {
+              p->priority = priority;	//changing priority of process break;
+         }
+      }
+      release(&ptable.lock); 
+      return pid;	
 }
-}
-release(&ptable.lock); return pid;	}
 ```
 
 ![image](https://user-images.githubusercontent.com/73429559/137192152-6332af0a-f4e6-485f-ad61-89e1c072ab77.png)
@@ -381,21 +385,22 @@ This user program will call system call chpr(change priority) to change priority
 #include "fcntl.h"
 
 int main(int argc, char *argv[])
-      {
+{
          int priority, pid;
          if(argc < 3)
-{
-printf(2, "Usage: nice pid priority\n"); exit();
-}
-pid = atoi(argv[1]); 
-priority = atoi(argv[2]); 
-if(priority<0 || priority>100)
-{
-printf(2, "Invalid priority (0-100)!\n"); exit();
-}
-printf(1, "pid=%d, pr=%d\n", pid, priority); ChangePriority(pid, priority);
-
-exit();
+         {
+               printf(2, "Usage: nice pid priority\n"); 
+               exit();
+         }
+         pid = atoi(argv[1]); 
+         priority = atoi(argv[2]); 
+         if(priority<0 || priority>100)
+         {
+                printf(2, "Invalid priority (0-100)!\n"); exit();
+         }
+         printf(1, "pid=%d, pr=%d\n", pid, priority); 
+         ChangePriority(pid, priority);
+         exit();
 }
 
 ```
