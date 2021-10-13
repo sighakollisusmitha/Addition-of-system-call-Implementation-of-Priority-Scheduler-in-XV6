@@ -352,36 +352,26 @@ int
 main(int argc, char *argv[])
 {
 int priority, pid;
+if(argc < 3)
+{
+printf(2, "Usage: nice pid priority\n"); exit();
+}
+pid = atoi(argv[1]); 
+priority = atoi(argv[2]); 
+if(priority<0 || priority>100)
+{
+printf(2, "Invalid priority (0-100)!\n"); exit();
+}
+printf(1, "pid=%d, pr=%d\n", pid, priority); ChangePriority(pid, priority);
 
+exit();
+}
 
+![image](https://user-images.githubusercontent.com/73429559/137193731-7e410986-eddf-42ac-b1ca-f3d7bf4a63a0.png)
 
+OUTPUT:
 
+![image](https://user-images.githubusercontent.com/73429559/137193778-e90e4045-39b2-47f5-97e7-81017059a818.png)
 
-
-
-
-
-
-
-
-
-
-
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![image](https://user-images.githubusercontent.com/73429559/137193833-99dc12ca-5c99-42f1-a79d-368cd59caa48.png)
 
